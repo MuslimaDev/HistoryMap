@@ -15,7 +15,7 @@ public class Account {
     private String about;
     private String interests;
 
-    public Account(String s, HttpStatus ok) {
+    public Account() {
     }
 
     public Account(String first_name, String last_name, String about, String interests) {

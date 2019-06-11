@@ -1,7 +1,5 @@
 package com.example.historymap.entity;
 
-import org.springframework.http.HttpStatus;
-
 import javax.persistence.*;
 
 @Entity
@@ -17,7 +15,7 @@ public class Story {
     private String story;
     private int likes;
 
-    public Story(String s, HttpStatus ok) {
+    public Story() {
     }
 
     public Story(String story_title, String location, UserRegistration user, String story, int likes) {

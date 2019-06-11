@@ -14,7 +14,7 @@ public class StoryController {
     @Autowired
     private StoryService storyService;
 
-    @GetMapping
+    @GetMapping()
     public List<Story> getAll() {
         return storyService.getAll();
     }
@@ -29,14 +29,13 @@ public class StoryController {
         return storyService.create(story);
     }
 
-    @PutMapping()
-    public String update(@RequestBody Story brand) {
-        return storyService.update(brand);
+    @PutMapping
+    public String update(@RequestBody Story story) {
+        return storyService.update(story);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete(@PathVariable Integer id) {
+    @DeleteMapping
+    public ResponseEntity<String> delete(@RequestParam Integer id){
         return storyService.deleteById(id);
     }
-
 }

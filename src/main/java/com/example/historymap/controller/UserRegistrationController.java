@@ -35,7 +35,7 @@ public class UserRegistrationController {
     }
 
     @DeleteMapping
-    public String delete(  @RequestParam Integer id){
+    public String delete(@RequestParam Integer id){
         return userRegistrationService.deleteById(id);
     }
 }
